@@ -1,0 +1,297 @@
+ Python Cheatsheet
+
+ Table of Contents:
+1. Introduction to Python
+2. Basic Syntax
+3. Data Types
+4. Variables
+5. Operators
+6. Control Flow
+7. Functions
+8. Classes and Objects (OOP)
+9. Modules and Packages
+10. File Handling
+11. Exception Handling
+12. Python Built-in Functions
+13. Common Python Libraries
+14. Useful Tips and Tricks
+15. Best Practices
+
+---
+
+ 1. Introduction to Python
+- Python is an interpreted, high-level, general-purpose programming language.
+- Created by Guido van Rossum and released in 1991.
+- Designed to be simple to read and write.
+
+---
+
+ 2. Basic Syntax
+
+python
+ Hello World Example
+print("Hello, World!")
+
+
+- Indentation: Python uses indentation to define blocks of code.
+- Comments: Use  for single-line comments, and   or """ """ for multi-line comments.
+
+---
+
+ 3. Data Types
+
+ Numeric Types
+- int: Integer numbers.
+- float: Floating point numbers.
+- complex: Complex numbers.
+
+ Sequence Types
+- str: String.
+- list: Ordered, mutable collection.
+- tuple: Ordered, immutable collection.
+
+ Other Types
+- bool: Boolean (True/False).
+- dict: Dictionary, key-value pairs.
+- set: Unordered, mutable collection of unique elements.
+
+Example:
+python
+x = 10        int
+y = 10.5      float
+name = "Sam"  string
+lst = [1, 2, 3]   list
+tup = (1, 2, 3)   tuple
+is_valid = True   bool
+
+
+---
+
+ 4. Variables
+- Dynamic Typing: Python is dynamically typed, so variable types dont need to be declared.
+- Naming Rules: Should start with a letter or underscore, can contain letters, digits, and underscores, but cannot be a reserved word.
+
+python
+name = "Python"
+age = 25
+
+
+---
+
+ 5. Operators
+
+ Arithmetic Operators:
+- +, -, , /, //, %, 
+
+ Comparison Operators:
+- ==, !=, >, <, >=, <=
+
+ Logical Operators:
+- and, or, not
+
+Example:
+python
+a = 10
+b = 20
+print(a + b)   30
+
+
+---
+
+ 6. Control Flow
+
+ if-else Statements
+python
+if condition:
+     code
+elif condition:
+     code
+else:
+     code
+
+
+ Loops
+
+ For Loop:
+python
+for i in range(5):
+    print(i)
+
+
+ While Loop:
+python
+i = 0
+while i < 5:
+    print(i)
+    i += 1
+
+
+ Break and Continue
+python
+for i in range(5):
+    if i == 3:
+        break
+    print(i)
+
+
+---
+
+ 7. Functions
+
+ Defining Functions:
+python
+def function_name(parameters):
+     code
+    return value
+
+
+Example:
+python
+def greet(name):
+    return f"Hello, {name}"
+
+print(greet("Alice"))
+
+
+ Lambda Functions:
+python
+sum = lambda a, b: a + b
+print(sum(3, 4))
+
+
+---
+
+ 8. Classes and Objects (OOP)
+
+ Defining a Class:
+python
+class Dog:
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+    
+    def bark(self):
+        return f"{self.name} says woof!"
+
+
+ Creating an Object:
+python
+dog1 = Dog("Buddy", "Labrador")
+print(dog1.bark())
+
+
+---
+
+ 9. Modules and Packages
+
+ Importing a Module:
+python
+import math
+print(math.sqrt(16))
+
+
+ Creating and Importing Your Own Module:
+python
+ In a file named mymodule.py
+def greet():
+    return "Hello from the module!"
+
+ In another file
+import mymodule
+print(mymodule.greet())
+
+
+---
+
+ 10. File Handling
+
+ Reading a File:
+python
+with open(file.txt, r) as file:
+    content = file.read()
+    print(content)
+
+
+ Writing to a File:
+python
+with open(file.txt, w) as file:
+    file.write("Hello, World!")
+
+
+---
+
+ 11. Exception Handling
+
+ Try-Except Block:
+python
+try:
+     code that might raise an error
+    x = 1 / 0
+except ZeroDivisionError:
+    print("You cant divide by zero!")
+finally:
+    print("This will always execute.")
+
+
+---
+
+ 12. Python Built-in Functions
+
+Some common built-in functions:
+- print()
+- len()
+- type()
+- range()
+- input()
+- str(), int(), float()
+
+---
+
+ 13. Common Python Libraries
+
+- NumPy: Array and matrix operations.
+- Pandas: Data manipulation and analysis.
+- Matplotlib: Plotting and visualization.
+- Requests: HTTP requests.
+- Flask: Web development framework.
+
+Example with NumPy:
+python
+import numpy as np
+arr = np.array([1, 2, 3])
+print(arr  2)
+
+
+---
+
+ 14. Useful Tips and Tricks
+
+ List Comprehensions:
+python
+squares = [x2 for x in range(10)]
+print(squares)
+
+
+ Using Enumerate:
+python
+for idx, value in enumerate([a, b, c]):
+    print(idx, value)
+
+
+ Unpacking Values:
+python
+a, b = 1, 2
+print(a, b)
+
+
+---
+
+ 15. Best Practices
+
+- PEP 8: Follow Pythons style guide for writing clean code.
+- DRY (Dont Repeat Yourself): Avoid code duplication.
+- Modular Code: Use functions and classes to create reusable components.
+- Meaningful Variable Names: Make your code more readable.
+- Test Your Code: Use tools like unittest or pytest to test your Python code.
+
+
